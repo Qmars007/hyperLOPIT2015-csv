@@ -81,11 +81,31 @@ exprs(hyperLOPIT2015)[1:6, 1:3] ## a matrix
 
 
 ```r
-fData(LOPIT2015)[1:6, 1:3] ## a data.frame
+fData(hyperLOPIT2015)[1:6, 1:3] ## a data.frame
 ```
 
 ```
-## Error in fData(LOPIT2015): error in evaluating the argument 'object' in selecting a method for function 'fData': Error: object 'LOPIT2015' not found
+##           entry.name
+## Q9JHU4   DYHC1_MOUSE
+## Q9QXS1-3  PLEC_MOUSE
+## Q9ERU9    RBP2_MOUSE
+## P26039    TLN1_MOUSE
+## Q8BTM8    FLNA_MOUSE
+## A2ARV4    LRP2_MOUSE
+##                                                                                                                         protein.description
+## Q9JHU4                                              Cytoplasmic dynein 1 heavy chain 1 OS=Mus musculus GN=Dync1h1 PE=1 SV=2 - [DYHC1_MOUSE]
+## Q9QXS1-3 Isoform PLEC-1 of Plectin OS=Mus musculus GN=Plec - [PLEC_MOUSE]|Isoform PLEC-1A of Plectin OS=Mus musculus GN=Plec - [PLEC_MOUSE]
+## Q9ERU9                                                     E3 SUMO-protein ligase RanBP2 OS=Mus musculus GN=Ranbp2 PE=1 SV=2 - [RBP2_MOUSE]
+## P26039                                                                             Talin-1 OS=Mus musculus GN=Tln1 PE=1 SV=2 - [TLN1_MOUSE]
+## Q8BTM8                                                                           Filamin-A OS=Mus musculus GN=Flna PE=1 SV=5 - [FLNA_MOUSE]
+## A2ARV4                                  Low-density lipoprotein receptor-related protein 2 OS=Mus musculus GN=Lrp2 PE=1 SV=1 - [LRP2_MOUSE]
+##          peptides.rep1
+## Q9JHU4             175
+## Q9QXS1-3           123
+## Q9ERU9             101
+## P26039             101
+## Q8BTM8              95
+## A2ARV4              85
 ```
 
 

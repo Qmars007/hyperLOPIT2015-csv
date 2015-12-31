@@ -37,7 +37,7 @@ exprs(hyperLOPIT2015)[1:6, 1:3] ## a matrix
 ```
 
 ```{r fdata}
-fData(LOPIT2015)[1:6, 1:3] ## a data.frame
+fData(hyperLOPIT2015)[1:6, 1:3] ## a data.frame
 ```
 
 ```{r pdata}
