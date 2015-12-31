@@ -1,0 +1,59 @@
+## The `pRolocdata` `hyperLOPIT` data, as csv files
+
+This data originates from the Bioconductor
+[`pRolocdata`](http://bioconductor.org/packages/release/data/experiment/html/pRolocdata.html)
+package. It is a recent spatial proteomics dataset, formatted and
+analysed using the
+[`pRoloc`](http://bioconductor.org/packages/release/bioc/html/pRoloc.html)
+software.
+
+#### Installation
+
+To install these software:
+
+```r
+source("https://bioconductor.org/biocLite.R")
+biocLite("pRoloc")
+biocLite("pRolocdata")
+```
+
+#### Accessing the data
+
+```{r demo, warning=FALSE}
+suppressPackageStartupMessages(library("pRolocdata"))
+data(hyperLOPIT2015)
+class(hyperLOPIT2015)
+hyperLOPIT2015
+```
+
+This `MSnSet` class is specific to quantitative proteomics data, but
+that canb be summerised by 2 or 3 tabular data structures (from an R
+point of view, 1 [expression `matrix`](./exprs.csv) and 1 or 2
+`data.frames` describing the [features](./fdata/csv) and
+[samples](./pdata.csv)), which are accessible individually with
+
+```{r exprs}
+exprs(hyperLOPIT2015)[1:6, 1:3] ## a matrix
+```
+
+```{r fdata}
+fData(LOPIT2015)[1:6, 1:3] ## a data.frame
+```
+
+```{r pdata}
+pData(hyperLOPIT2015)[1:6, 1:3] ## second data.frame
+```
+
+#### Producing the csv files
+
+```{r makecsv}
+write.csv(exprs(hyperLOPIT2015), file = "exprs.csv")
+write.csv(fData(hyperLOPIT2015), file = "fdata.csv")
+write.csv(pData(hyperLOPIT2015), file = "pdata.csv")
+```
+
+#### Session information
+
+```{r si}
+sessionInfo()
+```

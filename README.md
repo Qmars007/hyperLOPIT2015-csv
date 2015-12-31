@@ -21,83 +21,7 @@ biocLite("pRolocdata")
 
 
 ```r
-library("pRolocdata")
-```
-
-```
-## Loading required package: MSnbase
-## Loading required package: methods
-## Loading required package: BiocGenerics
-## Loading required package: parallel
-## 
-## Attaching package: 'BiocGenerics'
-## 
-## The following objects are masked from 'package:parallel':
-## 
-##     clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
-##     clusterExport, clusterMap, parApply, parCapply, parLapply,
-##     parLapplyLB, parRapply, parSapply, parSapplyLB
-## 
-## The following objects are masked from 'package:stats':
-## 
-##     IQR, mad, xtabs
-## 
-## The following objects are masked from 'package:base':
-## 
-##     anyDuplicated, append, as.data.frame, as.vector, cbind,
-##     colnames, do.call, duplicated, eval, evalq, Filter, Find, get,
-##     grep, grepl, intersect, is.unsorted, lapply, lengths, Map,
-##     mapply, match, mget, order, paste, pmax, pmax.int, pmin,
-##     pmin.int, Position, rank, rbind, Reduce, rownames, sapply,
-##     setdiff, sort, table, tapply, union, unique, unlist, unsplit
-## 
-## Loading required package: Biobase
-## Welcome to Bioconductor
-## 
-##     Vignettes contain introductory material; view with
-##     'browseVignettes()'. To cite Bioconductor, see
-##     'citation("Biobase")', and for packages 'citation("pkgname")'.
-## 
-## Loading required package: mzR
-## Loading required package: Rcpp
-## Loading required package: BiocParallel
-## Loading required package: ProtGenerics
-```
-
-```
-## Warning: replacing previous import by 'ggplot2::Position' when loading
-## 'MSnbase'
-```
-
-```
-## Warning: replacing previous import by 'ggplot2::unit' when loading
-## 'MSnbase'
-```
-
-```
-## Warning: replacing previous import by 'ggplot2::arrow' when loading
-## 'MSnbase'
-```
-
-```
-## 
-## This is MSnbase version 1.19.7 
-##   Read '?MSnbase' and references therein for information
-##   about the package and how to get started.
-## 
-## 
-## Attaching package: 'MSnbase'
-## 
-## The following object is masked from 'package:stats':
-## 
-##     smooth
-## 
-## 
-## This is pRolocdata version 1.9.1.
-## Use 'pRolocdata()' to list available data sets.
-```
-
-```r
+suppressPackageStartupMessages(library("pRolocdata"))
 data(hyperLOPIT2015)
 class(hyperLOPIT2015)
 ```
@@ -186,4 +110,48 @@ pData(hyperLOPIT2015)[1:6, 1:3] ## second data.frame
 write.csv(exprs(hyperLOPIT2015), file = "exprs.csv")
 write.csv(fData(hyperLOPIT2015), file = "fdata.csv")
 write.csv(pData(hyperLOPIT2015), file = "pdata.csv")
+```
+
+#### Session information
+
+
+```r
+sessionInfo()
+```
+
+```
+## R Under development (unstable) (2015-12-17 r69781)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Ubuntu 14.04.3 LTS
+## 
+## locale:
+##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
+##  [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+##  [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] parallel  methods   stats     graphics  grDevices utils     datasets 
+## [8] base     
+## 
+## other attached packages:
+## [1] pRolocdata_1.9.1    MSnbase_1.19.7      ProtGenerics_1.3.3 
+## [4] BiocParallel_1.5.11 mzR_2.5.2           Rcpp_0.12.2        
+## [7] Biobase_2.31.3      BiocGenerics_0.17.2
+## 
+## loaded via a namespace (and not attached):
+##  [1] knitr_1.11            magrittr_1.5          IRanges_2.5.18       
+##  [4] zlibbioc_1.17.0       doParallel_1.0.10     munsell_0.4.2        
+##  [7] colorspace_1.2-6      impute_1.45.0         lattice_0.20-33      
+## [10] foreach_1.4.3         stringr_1.0.0         plyr_1.8.3           
+## [13] tools_3.3.0           mzID_1.9.0            grid_3.3.0           
+## [16] gtable_0.1.2          affy_1.49.0           iterators_1.0.8      
+## [19] digest_0.6.8          preprocessCore_1.33.0 affyio_1.41.0        
+## [22] reshape2_1.4.1        ggplot2_2.0.0         formatR_1.2.1        
+## [25] S4Vectors_0.9.15      codetools_0.2-14      MALDIquant_1.14      
+## [28] evaluate_0.8          limma_3.27.6          stringi_1.0-1        
+## [31] BiocInstaller_1.21.2  pcaMethods_1.61.0     scales_0.3.0         
+## [34] XML_3.98-1.3          stats4_3.3.0          vsn_3.39.0
 ```

@@ -1,0 +1,21 @@
+"","Replicate","TMT.Reagent","Acquisiton.Method","Gradient.Fraction","Iodixonal.Density","Fraction.No"
+"X126.rep1",1,"X126","MS3","Cytosol",0,1
+"X127N.rep1",1,"X127N","MS3","1 to 6 (pooled)",6,2
+"X127C.rep1",1,"X127C","MS3","8 to 9 (pooled)",11,3
+"X128N.rep1",1,"X128N","MS3","10 to 11 (pooled)",13.3,4
+"X128C.rep1",1,"X128C","MS3","12",14.6,5
+"X129N.rep1",1,"X129N","MS3","14",17.4,6
+"X129C.rep1",1,"X129C","MS3","16",20.1,7
+"X130N.rep1",1,"X130N","MS3","18",26.8,8
+"X130C.rep1",1,"X130C","MS3","Chromatin",NA,10
+"X131.rep1",1,"X131","MS3","19",34.5,9
+"X126.rep2",2,"X126","MS3","Cytosol",0,1
+"X127N.rep2",2,"X127N","MS3","1 to 6 (pooled)",5.2,2
+"X127C.rep2",2,"X127C","MS3","7 to 9 (pooled)",10,3
+"X128N.rep2",2,"X128N","MS3","10 to 11 (pooled)",12.5,4
+"X128C.rep2",2,"X128C","MS3","12",14,5
+"X129N.rep2",2,"X129N","MS3","14 to 15 (pooled)",17.3,6
+"X129C.rep2",2,"X129C","MS3","17",20.9,7
+"X130N.rep2",2,"X130N","MS3","18 to 19 (pooled)",24.7,8
+"X130C.rep2",2,"X130C","MS3","Chromatin",NA,10
+"X131.rep2",2,"X131","MS3","20",31.9,9
