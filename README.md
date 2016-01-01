@@ -59,7 +59,7 @@ hyperLOPIT2015
 ```
 
 This `MSnSet` class is specific to quantitative proteomics data, but
-that canb be summerised by 2 or 3 tabular data structures (from an R
+that can be summerised by 2 or 3 tabular data structures (from an R
 point of view, 1 [expression `matrix`](./exprs.csv) and 1 or 2
 `data.frames` describing the [features](./fdata.csv) and
 [samples](./pdata.csv)), which are accessible individually with
