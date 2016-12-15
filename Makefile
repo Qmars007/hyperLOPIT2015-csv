@@ -1,2 +1,2 @@
-REAMD.md: README.Rmd
+REAMDE.md: README.Rmd
 	Rscript -e "knitr::knit('README.Rmd')"

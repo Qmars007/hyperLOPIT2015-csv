@@ -52,6 +52,12 @@ write.csv(fData(hyperLOPIT2015), file = "fdata.csv")
 write.csv(pData(hyperLOPIT2015), file = "pdata.csv")
 ```
 
+#### Visualisation
+
+```{r plot2d}
+pRoloc::plot2D(hyperLOPIT2015)
+```
+
 #### Session information
 
 ```{r si}

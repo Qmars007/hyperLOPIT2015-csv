@@ -43,19 +43,19 @@ hyperLOPIT2015
 ## protocolData: none
 ## phenoData
 ##   sampleNames: X126.rep1 X127N.rep1 ... X131.rep2 (20 total)
-##   varLabels: Replicate TMT.Reagent ... Fraction.No (6 total)
+##   varLabels: Replicate TMT.Reagent ... Iodixonal.Density (5 total)
 ##   varMetadata: labelDescription
 ## featureData
 ##   featureNames: Q9JHU4 Q9QXS1-3 ... Q9Z2R6 (5032 total)
-##   fvarLabels: entry.name protein.description ...
-##     cell.surface.proteins (24 total)
+##   fvarLabels: entry.name protein.description ... markers2015 (25
+##     total)
 ##   fvarMetadata: labelDescription
 ## experimentData: use 'experimentData(object)'
 ## Annotation:  
 ## - - - Processing information - - -
-## Loaded on Thu Nov  5 18:07:10 2015. 
+## Loaded on Mon Aug 22 13:47:10 2016. 
 ## Normalised to sum of intensities. 
-##  MSnbase version: 1.19.3
+##  MSnbase version: 1.21.7
 ```
 
 This `MSnSet` class is specific to quantitative proteomics data, but
@@ -132,6 +132,25 @@ write.csv(fData(hyperLOPIT2015), file = "fdata.csv")
 write.csv(pData(hyperLOPIT2015), file = "pdata.csv")
 ```
 
+#### Visualisation
+
+
+```r
+pRoloc::plot2D(hyperLOPIT2015)
+```
+
+```
+## Warning: replacing previous import 'BiocGenerics::var' by 'stats::var' when
+## loading 'MLInterfaces'
+```
+
+```
+## Warning: replacing previous import 'stats::var' by 'BiocGenerics::var' when
+## loading 'pRoloc'
+```
+
+![plot of chunk plot2d](figure/plot2d-1.png)
+
 #### Session information
 
 
@@ -140,9 +159,9 @@ sessionInfo()
 ```
 
 ```
-## R Under development (unstable) (2015-12-17 r69781)
+## R Under development (unstable) (2016-12-09 r71771)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 14.04.3 LTS
+## Running under: Ubuntu 14.04.5 LTS
 ## 
 ## locale:
 ##  [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
@@ -157,21 +176,44 @@ sessionInfo()
 ## [8] base     
 ## 
 ## other attached packages:
-## [1] pRolocdata_1.9.1    MSnbase_1.19.7      ProtGenerics_1.3.3 
-## [4] BiocParallel_1.5.11 mzR_2.5.2           Rcpp_0.12.2        
-## [7] Biobase_2.31.3      BiocGenerics_0.17.2
+## [1] pRolocdata_1.13.0   MSnbase_2.1.3       ProtGenerics_1.7.0 
+## [4] BiocParallel_1.9.2  mzR_2.9.0           Rcpp_0.12.8        
+## [7] Biobase_2.35.0      BiocGenerics_0.21.1
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] knitr_1.11            magrittr_1.5          IRanges_2.5.18       
-##  [4] zlibbioc_1.17.0       doParallel_1.0.10     munsell_0.4.2        
-##  [7] colorspace_1.2-6      impute_1.45.0         lattice_0.20-33      
-## [10] foreach_1.4.3         stringr_1.0.0         plyr_1.8.3           
-## [13] tools_3.3.0           mzID_1.9.0            grid_3.3.0           
-## [16] gtable_0.1.2          affy_1.49.0           iterators_1.0.8      
-## [19] digest_0.6.8          preprocessCore_1.33.0 affyio_1.41.0        
-## [22] reshape2_1.4.1        ggplot2_2.0.0         formatR_1.2.1        
-## [25] S4Vectors_0.9.15      codetools_0.2-14      MALDIquant_1.14      
-## [28] evaluate_0.8          limma_3.27.6          stringi_1.0-1        
-## [31] BiocInstaller_1.21.2  pcaMethods_1.61.0     scales_0.3.0         
-## [34] XML_3.98-1.3          stats4_3.3.0          vsn_3.39.0
+##   [1] minqa_1.2.4           colorspace_1.3-1      hwriter_1.3.2        
+##   [4] class_7.3-14          modeltools_0.2-21     mclust_5.2           
+##   [7] pls_2.5-0             base64enc_0.1-3       proxy_0.4-16         
+##  [10] MLInterfaces_1.55.0   MatrixModels_0.4-1    affyio_1.45.0        
+##  [13] flexmix_2.3-13        AnnotationDbi_1.37.0  mvtnorm_1.0-5        
+##  [16] codetools_0.2-15      splines_3.4.0         doParallel_1.0.10    
+##  [19] impute_1.49.0         robustbase_0.92-7     knitr_1.15.1         
+##  [22] jsonlite_1.1          nloptr_1.0.4          caret_6.0-73         
+##  [25] pbkrtest_0.4-6        annotate_1.53.0       rda_1.0.2-2          
+##  [28] cluster_2.0.5         kernlab_0.9-25        vsn_3.43.4           
+##  [31] sfsmisc_1.1-0         shiny_0.14.2          compiler_3.4.0       
+##  [34] sampling_2.7          assertthat_0.1        Matrix_1.2-7.1       
+##  [37] lazyeval_0.2.0        limma_3.31.6          htmltools_0.3.5      
+##  [40] quantreg_5.29         tools_3.4.0           ggvis_0.4.3          
+##  [43] gtable_0.2.0          affy_1.53.0           reshape2_1.4.2       
+##  [46] dplyr_0.5.0           pRoloc_1.15.3         MALDIquant_1.15      
+##  [49] trimcluster_0.1-2     gdata_2.17.0          preprocessCore_1.37.0
+##  [52] nlme_3.1-128          iterators_1.0.8       fpc_2.1-10           
+##  [55] stringr_1.1.0         lme4_1.1-12           lpSolve_5.6.13       
+##  [58] mime_0.5              gtools_3.5.0          XML_3.98-1.5         
+##  [61] dendextend_1.3.0      DEoptimR_1.0-8        zlibbioc_1.21.0      
+##  [64] MASS_7.3-45           scales_0.4.1          BiocInstaller_1.25.2 
+##  [67] pcaMethods_1.67.0     SparseM_1.74          RColorBrewer_1.1-2   
+##  [70] memoise_1.0.0         ggplot2_2.2.0         biomaRt_2.31.3       
+##  [73] rpart_4.1-10          stringi_1.1.2         RSQLite_1.1          
+##  [76] highr_0.6             genefilter_1.57.0     S4Vectors_0.13.5     
+##  [79] randomForest_4.6-12   foreach_1.4.3         e1071_1.6-7          
+##  [82] prabclus_2.2-6        bitops_1.0-6          mzID_1.13.0          
+##  [85] evaluate_0.10         lattice_0.20-34       htmlwidgets_0.8      
+##  [88] gbm_2.1.1             plyr_1.8.4            magrittr_1.5         
+##  [91] R6_2.2.0              IRanges_2.9.14        DBI_0.5-1            
+##  [94] whisker_0.3-2         mgcv_1.8-16           survival_2.40-1      
+##  [97] RCurl_1.95-4.8        nnet_7.3-12           tibble_1.2           
+## [100] msdata_0.15.0        
+##  [ reached getOption("max.print") -- omitted 12 entries ]
 ```
